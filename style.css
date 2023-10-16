@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.had{
+		position: relative;
+		left: -276px;
+		top: -50px;
+		//background: #34495e;
+		color: #0f0;
+		width: 667px;
+		font-size: 36px;
+		transform: translateX(50%);
+		text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+
+}
+.sss{
+	background: #34495e;
+	padding: 0; 
+	margin: 0;
+	position: static;
+	top: 0;
+	z-index: 222;
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: black;
+}
+nav{
+	position: relative;
+	margin: 5px 50%;
+	width: 470px;
+	height: 50px;
+	background: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+	position: sticky;
+	top: 0;
+	z-index: 15;
+
+}
+nav a{
+	font-size: 15px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	height: 100%;
+	/* height: 5px; */
+	top: 0;
+	/* bottom: 0; */
+	z-index: 0;
+	background: limegreen;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+nav a:nth-child(1){
+	width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 0;
+}
+nav a:nth-child(2){
+	width: 110px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 100px;
+}
+nav a:nth-child(3){
+	width: 100px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 100px;
+	left: 210px;
+}
+nav a:nth-child(4){
+	width: 100px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 100px;
+	left: 310px;
+}
+
+
+
+.container{
+	//margin:  50px;
+	//padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: black;
+}
+
+.container a{
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	border: 2px solid #0f0;
+	margin: 40px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: white;
+	-webkit-box-reflect: below 0px linear-gradient(transparent:#0002 ) 
+	transition:  0.5s;
+
+}
+
+.container a:hover{
+	transition-delay: 0.5s;
+	color: black;
+	box-shadow: 0 0 10px #0f0,
+	0 0 20px #0f0,
+	0 0 40px #0f0,
+	0 0 80px #0f0,
+	0 0 160px #0f0;
+
+
+}
+
+.container a span{
+	position: relative;
+	z-index: 100;
+}
+
+.container a:nth-child(2){
+	filter: hue-rotate(80deg);
+}
+
+.container a::before
+{
+	content: '';
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #0f0;
+	box-shadow: 5px -8px 0 #0f0,
+				5px 8px 0 #0f0;
+	transition: width 0.5s, left 0.5s , height 0.5s,
+	box-shadow 0.5s;
+	transition-delay: 1s,0.5s,0s,0s;
+
+}
+
+.container a:hover::before{
+	width: 60%;
+	height: 100%;
+	left: -2px;
+	box-shadow: 5px 0 0 #0f0,
+				5px 0 0 #0f0;
+	transition-delay: 0s,0s,0.5s,1s;
+}
+
+
+
+.container a::after
+{
+	content: '';
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #0f0;
+	box-shadow: -5px -8px 0 #0f0,
+				-5px 8px 0 #0f0;
+	transition: width 0.5s, left 0.5s , height 0.5s,
+	box-shadow 0.5s;
+	transition-delay: 1s,0.5s,0s,0s;
+
+}
+
+.container a:hover::after{
+	width: 60%;
+	height: 100%;
+	right: -2px;
+	box-shadow: -5px 0 0 #0f0,
+				-5px 0 0 #0f0;
+	transition-delay: 0s,0s,0.5s,1s;
+}
+
+
+.log{
+	position: relative;
+	width: 95px;
+	left: 618px;
+	top: -51px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.log:hover{
+		background: limegreen;
+
+}

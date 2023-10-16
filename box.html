@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="box.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body style="background: dimgrey;">
+
+	<i id="nav-arrow" onclick="goBack()"  class="fas fa-arrow-alt-circle-left"></i>
+<div class="pen">
+	 <div class="penguin">
+
+   	 <div class="penguin-bottom">
+
+
+
+    <div class="right-hand"></div>
+
+    <div class="left-hand"></div>
+
+    <div class="right-feet"></div>
+
+    <div class="left-feet"></div>
+
+  </div>
+
+  <div class="penguin-top">
+
+    <div class="right-cheek"></div>
+
+    <div class="left-cheek"></div>
+
+    <div class="belly"></div>
+
+    <div class="right-eye">
+
+      <div class="sparkle"></div>
+
+    </div>
+
+    <div class="left-eye">
+
+      <div class="sparkle"></div>
+
+    </div>
+
+    <div class="blush-right"></div>
+
+    <div class="blush-left"></div>
+
+    <div class="beak-top"></div>
+
+    <div class="beak-bottom"></div>
+
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+<div class="box"> <h2>[root@localhost]# <input  type="text" id="inp" name="inp"  class="inp" placeholder="Type your command ">&nbsp;&nbsp;&nbsp;
+
+<button style="cursor:pointer;"  id="but" onclick="html()"  class="btn">Run</button></h2>
+
+	<pre>
+
+	<div id="result"></div>
+
+	</pre>
+
+	</div>
+
+	
+
+
+
+</body>
+
+
+
+<script>
+
+function html(){
+
+but = document.getElementById("inp").value
+
+var hrx = new XMLHttpRequest();
+
+	
+hrx.open("GET" , "http://3.7.248.241/cgi-bin/app.py?x=" + but,true);
+
+hrx.send();
+
+hrx.onload = function(){
+
+var output = hrx.responseText;
+
+document.getElementById('result').innerHTML = output;
+document.getElementById('inp').value = "";
+
+}
+
+}
+var input = document.getElementById('inp');
+input.addEventListener("keyup", function(event){
+	if(event.keyCode == 13){
+		html();
+	}
+});
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+
+
+</html>
+
+
+
+

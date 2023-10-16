@@ -1,0 +1,24 @@
+body {
+  background-image: url('iron.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.letter {
+  font: bold;
+  font-size: 25px;
+  color: white;
+  height: 100px;
+  width: 600px;
+  padding: 30px;
+
+}
+
+.abt{
+
+  height: 100px;
+  width: 500px;
+  color: white;
+  padding-right: 10px px;
+}

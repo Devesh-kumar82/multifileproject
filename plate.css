@@ -1,0 +1,33 @@
+#demo-file::file-selector-button {
+	border: 2px solid #555555;
+	color: limegreen;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: limegreen;
+}
+
+#demo-file::file-selector-button:hover {
+	background-color: limegreen;
+}
+
+#demo-file::-webkit-file-upload-button {
+	border: 2px solid limegreen;
+	color: black;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #ffffff;
+}
+
+#demo-file::-webkit-file-upload-button:hover {
+	background-color: limegreen;
+}
+
+#demo-file {
+    margin: -51px -33px 15px 435px;
+}
+
+.car{
+    height: 414px;
+   
+    margin: -7px 95px 0px 171px;
+}
