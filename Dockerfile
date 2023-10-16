@@ -5,7 +5,6 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install httpd -y
 RUN yum install net-tools -y
 COPY  .   /var/www/html/
-COPY  /home/   /var/
 COPY  ./cgi-bin/   /var/www/cgi-bin/
 RUN chmod +x /var/www/cgi-bin/app.py
 RUN chmod +x /var/www/cgi-bin/app1.py
